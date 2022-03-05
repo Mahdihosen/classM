@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ClassM">
         <activity
+            android:name=".AddMoneyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AllMoneyActivity"
+            android:exported="false" />
+        <activity
             android:name=".SignupActivity"
             android:exported="true">
             <intent-filter>

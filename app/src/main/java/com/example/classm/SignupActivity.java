@@ -55,7 +55,7 @@ public class SignupActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Intent i = new Intent(SignupActivity.this, AllRestActivity.class);
+                            Intent i = new Intent(SignupActivity.this, AllMoneyActivity.class);
                             startActivity(i);
                         } else {
                             // TODO: what to do if fails

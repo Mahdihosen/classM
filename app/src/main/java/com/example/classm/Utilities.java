@@ -1,5 +1,15 @@
 package com.example.classm;
 
+enum ErrorCodes
+{
+    IncorrectAuth, FieldsEmpty, True, False
+}
+
+enum ExpenseCat
+{
+    id, name, receiverName, date, day, price, percentage
+}
+
 public class Utilities
 {
     private static Utilities instance;

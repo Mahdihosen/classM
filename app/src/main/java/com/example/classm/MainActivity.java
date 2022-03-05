@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Intent i = new Intent(MainActivity.this, AllRestActivity.class);
+                            Intent i = new Intent(MainActivity.this, AllMoneyActivity.class);
                             startActivity(i);
 
                         } else {
@@ -64,6 +64,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void gotoSignup(View view) {
         Intent i = new Intent(this, SignupActivity.class);
+        startActivity(i);
+    }
+
+    public void AllMoneyActivity(View view) {
+        Intent i =new Intent(this,AllMoneyActivity.class);
+        startActivity(i);
+    }
+    public void AddMoneyActivity(View view){
+        Intent i =new Intent(this,AddMoneyActivity.class);
         startActivity(i);
     }
 }

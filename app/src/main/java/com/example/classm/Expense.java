@@ -1,36 +1,33 @@
 package com.example.classm;
 
-public class Expense
-{
-    int id;
-    String name;
-    String receiverName;
-    String date;
-    String day;
-    double price;
-    int percentage;
+import java.io.Serializable;
 
-    public Expense(int id, String name, String receiverName, String date, String day, double price, int percentage)
-    {
+public class Expense implements Serializable
+{
+    private String id;
+    private String name;
+    private String date;
+    private String day;
+    private Double price;
+    private Integer percentage;
+    private ExpenseCat category;
+
+    public Expense(String id, String name, String date, String day, Double price, Integer percentage, ExpenseCat category) {
         this.id = id;
         this.name = name;
-        this.receiverName = receiverName;
         this.date = date;
         this.day = day;
         this.price = price;
         this.percentage = percentage;
+        this.category = category;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
     public String getName() {
         return name;
-    }
-
-    public String getReceiverName() {
-        return receiverName;
     }
 
     public String getDate() {
@@ -41,24 +38,24 @@ public class Expense
         return day;
     }
 
-    public double getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public int getPercentage() {
+    public Integer getPercentage() {
         return percentage;
     }
 
-    public void setId(int id) {
+    public ExpenseCat getCategory() {
+        return category;
+    }
+
+    public void setId(String id) {
         this.id = id;
     }
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public void setReceiverName(String receiverName) {
-        this.receiverName = receiverName;
     }
 
     public void setDate(String date) {
@@ -69,24 +66,28 @@ public class Expense
         this.day = day;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 
-    public void setPercentage(int percentage) {
+    public void setPercentage(Integer percentage) {
         this.percentage = percentage;
+    }
+
+    public void setCategory(ExpenseCat category) {
+        this.category = category;
     }
 
     @Override
     public String toString() {
         return "Expense{" +
-                "id=" + id +
+                "id='" + id + '\'' +
                 ", name='" + name + '\'' +
-                ", receiverName='" + receiverName + '\'' +
                 ", date='" + date + '\'' +
                 ", day='" + day + '\'' +
                 ", price=" + price +
                 ", percentage=" + percentage +
+                ", category=" + category +
                 '}';
     }
 }
